@@ -120,19 +120,20 @@ class _PinkGranadineBackground extends StatelessWidget {
             ),
             margin: EdgeInsets.only(left: 25, top: 60, right: 25, bottom: 0),
           ),
-          Align(
-            alignment: Alignment.topCenter,
-            child:
-                Container(child: Image.asset("assets/Pomegranate image.png")),
-          ),
+          Spacer(),
+          Container(child: Image.asset("assets/Pomegranate image.png"), alignment: Alignment.topCenter),
+          Spacer(),
+          Spacer()
         ],
+
       ),
       decoration: BoxDecoration(
-          color: Colors.pink.shade100,
+          color: const Color(0xfff8a2a1),
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(25),
             topRight: Radius.circular(25),
           )),
+
     );
   }
 }
@@ -145,33 +146,39 @@ class _PomegranadeInfo extends StatelessWidget {
         children: [
           Text("UNIT", style: TextStyle(fontWeight: FontWeight.bold)),
           Container(height: 20),
-          Row(children: [
+          Row(
+          children: [
             Text("4 units", style: TextStyle(fontWeight: FontWeight.bold)),
             Text(" (0.9-1.2 kg)"),
-          ]),
+          ]
+          ),
           Container(height: 20),
           Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/Round red rectangle.png"),
-                      alignment: Alignment.topLeft)),
-              child: Container(
-                  child: Row(children: [
-                    Image.asset("assets/Money bag icon.png"),
-                    Container(width: 15),
-                    Text('Price for club members: \$199',
-                        style: TextStyle(color: Colors.red)),
-                    Container(width: 160),
-                    Image.asset("assets/Forward arrow icon.png"),
-                    Image.asset("assets/Forward arrow icon.png")
-                  ]),
-                  margin:
-                      EdgeInsets.only(left: 10, top: 10, right: 0, bottom: 10)))
+            decoration: BoxDecoration(image: DecorationImage(
+              image: AssetImage("assets/Round red rectangle.png"),
+              alignment: Alignment.topLeft
+              )),
+            child: Container(
+              child: Row(
+              children:
+              [
+                Image.asset("assets/Money bag icon.png"),
+                Container(width: 15),
+                Text('Price for club members: \$199', style: TextStyle(color: Colors.red)),
+                Container(width: 160),
+                Image.asset("assets/Forward arrow icon.png"),
+                Image.asset("assets/Forward arrow icon.png")
+              ]
+            ),
+            margin: EdgeInsets.only(left: 10, top: 10, right: 0, bottom: 10)
+            )
+          )
         ],
         crossAxisAlignment: CrossAxisAlignment.start,
-      ),
-      margin: EdgeInsets.only(left: 40, top: 60, right: 0, bottom: 0),
-      alignment: Alignment.topCenter,
+        ),
+    
+    margin: EdgeInsets.only(left: 40, top: 60, right: 0, bottom: 0),
+
     );
   }
 }
