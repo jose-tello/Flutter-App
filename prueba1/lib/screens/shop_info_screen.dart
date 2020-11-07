@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class ShopInfoScreen extends StatelessWidget {
@@ -35,8 +37,27 @@ class _PomegranadePreview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      child: Column(
+        children: [
+          Container(
+            child: Row(  // Lower this
+            children:[
+            Image.asset("assets/Back arrow icon.png"),
+            Spacer(),
+            Image.asset("assets/Lens icon.png"),
+            Container(width: 60),
+            Image.asset("assets/Store icon.png"),
+            ],
+            ),
+            margin: EdgeInsets.only(left: 25, top: 60, right: 25, bottom: 0),
+          ),
+          Container(child: Image.asset("assets/Pomegranate image.png")),
+          ],
+          mainAxisSize: MainAxisSize.min,
+      ),
+
       decoration: BoxDecoration(
-          color: Colors.pink,
+          color: Colors.pink.shade100,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(25),
             topRight: Radius.circular(25),
@@ -44,7 +65,6 @@ class _PomegranadePreview extends StatelessWidget {
     );
   }
 }
-
 
 class _PomegranadeInfo extends StatelessWidget {
   @override
