@@ -137,7 +137,12 @@ class _PomegranadeInfo extends StatelessWidget {
         children: [
           Text("UNIT", style: TextStyle(fontWeight: FontWeight.bold)),
           Container(height: 20),
-          Text("4 units (0.9-1.2 kg)", style: TextStyle(fontWeight: FontWeight.bold)),
+          Row(
+          children: [
+            Text("4 units", style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(" (0.9-1.2 kg)"),
+          ]
+          ),
           Container(height: 20),
           Container(
             decoration: BoxDecoration(image: DecorationImage(
@@ -150,7 +155,7 @@ class _PomegranadeInfo extends StatelessWidget {
               [
                 Image.asset("assets/Money bag icon.png"),
                 Container(width: 15),
-                Text('Price for club members: \$199'),
+                Text('Price for club members: \$199', style: TextStyle(color: Colors.red)),
                 Container(width: 160),
                 Image.asset("assets/Forward arrow icon.png"),
                 Image.asset("assets/Forward arrow icon.png")
