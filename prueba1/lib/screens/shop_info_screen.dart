@@ -51,9 +51,10 @@ class _PomegranadePreview extends StatelessWidget {
             ),
             margin: EdgeInsets.only(left: 25, top: 60, right: 25, bottom: 0),
           ),
-          Container(child: Image.asset("assets/Pomegranate image.png")),
+          Align(alignment: Alignment.topCenter,
+          child: Container(child: Image.asset("assets/Pomegranate image.png")),
+          ),
           ],
-          mainAxisSize: MainAxisSize.min,
       ),
 
       decoration: BoxDecoration(
