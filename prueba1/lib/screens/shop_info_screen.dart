@@ -7,12 +7,25 @@ class ShopInfoScreen extends StatelessWidget {
         body: Column(
       children: [
         Expanded(flex: 6, child: _PomegranadePreview()),
-        Expanded(flex: 3, child: _PomegranadeInfo()),
+        Expanded(flex: 2, child: _BuyInfo()),
+        Expanded(flex: 2, child: _PomegranadeInfo()),
       ],
     ));
   }
 }
 
+
+class _BuyInfo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white10,
+        border: Border.all(color: Colors.deepPurple[50], width: 10),
+      ),
+    );
+  }
+}
 
 class _PomegranadePreview extends StatelessWidget {
   @override
