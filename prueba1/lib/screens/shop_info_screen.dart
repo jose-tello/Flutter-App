@@ -132,13 +132,40 @@ class _PinkGranadineBackground extends StatelessWidget {
 class _PomegranadeInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text('UNIT'),
-          ],
-        ));
+    return Container(
+      child: Column(
+        children: [
+          Text("UNIT", style: TextStyle(fontWeight: FontWeight.bold)),
+          Container(height: 20),
+          Text("4 units (0.9-1.2 kg)", style: TextStyle(fontWeight: FontWeight.bold)),
+          Container(height: 20),
+          Container(
+            decoration: BoxDecoration(image: DecorationImage(
+              image: AssetImage("assets/Round red rectangle.png"),
+              alignment: Alignment.topLeft
+              )),
+            child: Container(
+              child: Row(
+              children:
+              [
+                Image.asset("assets/Money bag icon.png"),
+                Container(width: 15),
+                Text('Price for club members: \$199'),
+                Container(width: 160),
+                Image.asset("assets/Forward arrow icon.png"),
+                Image.asset("assets/Forward arrow icon.png")
+              ]
+            ),
+            margin: EdgeInsets.only(left: 10, top: 10, right: 0, bottom: 10)
+            )
+          )
+        ],
+        crossAxisAlignment: CrossAxisAlignment.start,
+        ),
+    
+    margin: EdgeInsets.only(left: 40, top: 60, right: 0, bottom: 0),
+    alignment: Alignment.topCenter,
+
+    );
   }
 }
