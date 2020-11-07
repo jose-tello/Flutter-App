@@ -28,13 +28,21 @@ class _AddToCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        bottom: 15,
-        left: 230,
-        child: Container(
-          width: 150,
-          height: 70,
-          color: Colors.green[300],
-        ));
+      bottom: 12,
+      left: 230,
+      child: Container(
+        width: 150,
+        height: 50,
+        color: Colors.green[900],
+        //margin: EdgeInsets.only(left: 0, top: 20, right: 0, bottom: 20),
+        child: Text(
+          'ADD  +',
+          textScaleFactor: 2,
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
+      ),
+    );
   }
 }
 
@@ -75,17 +83,17 @@ class _BuyInfo extends StatelessWidget {
               ],
             ),
             Align(
-            alignment: Alignment.centerLeft,
-            child: Container(
-              width: 60,
-              height: 30,
-              decoration: BoxDecoration(
-                color: Colors.red,
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-              ),
-              padding: EdgeInsets.all(5),
-            )
-            )
+                alignment: Alignment.centerLeft,
+                child: Container(
+                    width: 65,
+                    height: 30,
+                    padding: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child:
+                        Text('23% OFF', style: TextStyle(color: Colors.white))))
           ],
         ),
       ),
@@ -137,40 +145,33 @@ class _PomegranadeInfo extends StatelessWidget {
         children: [
           Text("UNIT", style: TextStyle(fontWeight: FontWeight.bold)),
           Container(height: 20),
-          Row(
-          children: [
+          Row(children: [
             Text("4 units", style: TextStyle(fontWeight: FontWeight.bold)),
             Text(" (0.9-1.2 kg)"),
-          ]
-          ),
+          ]),
           Container(height: 20),
           Container(
-            decoration: BoxDecoration(image: DecorationImage(
-              image: AssetImage("assets/Round red rectangle.png"),
-              alignment: Alignment.topLeft
-              )),
-            child: Container(
-              child: Row(
-              children:
-              [
-                Image.asset("assets/Money bag icon.png"),
-                Container(width: 15),
-                Text('Price for club members: \$199', style: TextStyle(color: Colors.red)),
-                Container(width: 160),
-                Image.asset("assets/Forward arrow icon.png"),
-                Image.asset("assets/Forward arrow icon.png")
-              ]
-            ),
-            margin: EdgeInsets.only(left: 10, top: 10, right: 0, bottom: 10)
-            )
-          )
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/Round red rectangle.png"),
+                      alignment: Alignment.topLeft)),
+              child: Container(
+                  child: Row(children: [
+                    Image.asset("assets/Money bag icon.png"),
+                    Container(width: 15),
+                    Text('Price for club members: \$199',
+                        style: TextStyle(color: Colors.red)),
+                    Container(width: 160),
+                    Image.asset("assets/Forward arrow icon.png"),
+                    Image.asset("assets/Forward arrow icon.png")
+                  ]),
+                  margin:
+                      EdgeInsets.only(left: 10, top: 10, right: 0, bottom: 10)))
         ],
         crossAxisAlignment: CrossAxisAlignment.start,
-        ),
-    
-    margin: EdgeInsets.only(left: 40, top: 60, right: 0, bottom: 0),
-    alignment: Alignment.topCenter,
-
+      ),
+      margin: EdgeInsets.only(left: 40, top: 60, right: 0, bottom: 0),
+      alignment: Alignment.topCenter,
     );
   }
 }
