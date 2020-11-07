@@ -15,64 +15,85 @@ class ShopInfoScreen extends StatelessWidget {
   }
 }
 
-
 class _PomegranadePreview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      children: [
-        _PinkGranadineBackground(),
-        _BuyInfo(),
-        _AddToCart()
-      ],
+      children: [_PinkGranadineBackground(), _BuyInfo(), _AddToCart()],
     );
   }
 }
 
 class _AddToCart extends StatelessWidget {
-  const _AddToCart({
-    Key key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Positioned(
         bottom: 15,
-        left: 270,
+        left: 230,
         child: Container(
           width: 150,
-          height: 90,
+          height: 70,
           color: Colors.green[300],
         ));
   }
 }
 
 class _BuyInfo extends StatelessWidget {
-  const _BuyInfo({
-    Key key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        bottom: 0,
-        left: 50,
-        child: Container(
-          width: 220,
-          height: 140,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            border: Border.all(color: Colors.deepPurple[50], width: 4),
-          ),
-        ));
+      bottom: 0,
+      left: 50,
+      child: Container(
+        width: 180,
+        height: 110,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(color: Colors.deepPurple[50], width: 4),
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+        ),
+        padding: EdgeInsets.all(5),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Text(
+                  'Pomegranate ',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text('(Anaar)')
+              ],
+            ),
+            Row(
+              children: [
+                Text(
+                  '\$199  ',
+                ),
+                Text('\$259',
+                    style: TextStyle(decoration: TextDecoration.lineThrough))
+              ],
+            ),
+            Align(
+            alignment: Alignment.centerLeft,
+            child: Container(
+              width: 60,
+              height: 30,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+              ),
+              padding: EdgeInsets.all(5),
+            )
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
 
 class _PinkGranadineBackground extends StatelessWidget {
-  const _PinkGranadineBackground({
-    Key key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
