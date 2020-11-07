@@ -18,11 +18,15 @@ class ShopInfoScreen extends StatelessWidget {
 class _BuyInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white10,
-        border: Border.all(color: Colors.deepPurple[50], width: 10),
+    return Row(
+      children: [
+         Container(
+           decoration: BoxDecoration(
+           color: Colors.black,
+           border: Border.all(color: Colors.deepPurple[50], width: 10),
       ),
+  )
+    ],
     );
   }
 }
